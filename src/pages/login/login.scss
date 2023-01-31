@@ -1,5 +1,7 @@
+@import '../../variables.scss';
+
 .formContainer {
-    background-color: #bcdcc5;
+    background-color: $ligthGreen;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -16,13 +18,13 @@
         min-width: 300px;
 
         .logo {
-            color: #245639;
+            color: $darkGreen;
             font-size: 24px;
             font-weight: bold;
         }
 
         .title {
-            color: #245639;
+            color: $darkGreen;
             font-size: 12px;   
         }
 
@@ -34,32 +36,32 @@
             input {
                 padding: 10px 0px;
                 border: none;
-                border-bottom: 1px solid #bcdcc5;
-                color: #245639;
+                border-bottom: 1px solid $ligthGreen;
+                color: $darkGreen;
                 &::placeholder {
                     color: #2456396b;
                 }
 
                 &:focus {
                     outline: none;
-                    border-bottom: 1px solid #245639;
+                    border-bottom: 1px solid $darkGreen;
                 }
             }
             
             button {
-                background-color: #bcdcc5;
+                background-color: $ligthGreen;
                 border: none;
                 padding: 10px;
                 border-radius: 5px;
                 cursor: pointer;
-                color: #245639;
+                color: $darkGreen;
                 font-weight: bold;
             }
         }
 
         p {
             font-size: 12px;
-            color: #245639;
+            color: $darkGreen;
         }
     }
 }
