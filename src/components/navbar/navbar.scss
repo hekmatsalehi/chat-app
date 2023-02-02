@@ -1,0 +1,36 @@
+@import '../../variables.scss';
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: $veryDarkGreen;
+    height: 50px;
+    padding: 10px;
+    justify-content: space-between;
+    color: $ligthGreen;
+
+    .logo {
+        font-weight: bold;
+    }
+
+    .user {
+        display: flex;
+        gap: 10px;
+
+        img {
+            background-color: $ligthGreen;
+            width: 24px;
+            height: 24px;
+            border-radius: 50px;
+            object-fit: cover;
+        }
+
+        button {
+            border: none;
+            background-color: $ligthGreen;
+            cursor: pointer;
+            border-radius: 3px;
+            color: $veryDarkGreen;
+        }
+    }
+}
