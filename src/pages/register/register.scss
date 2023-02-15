@@ -1,7 +1,7 @@
 @import '../../variables.scss';
 
 .formContainer {
-    background-color: $ligthGreen;
+    background-color: $ligthColor;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -18,13 +18,13 @@
         min-width: 300px;
 
         .logo {
-            color: $darkGreen;
+            color: $darkColor;
             font-size: 24px;
             font-weight: bold;
         }
 
         .title {
-            color: $darkGreen;
+            color: $darkColor;
             font-size: 12px;   
         }
 
@@ -36,15 +36,15 @@
             input {
                 padding: 10px 0px;
                 border: none;
-                border-bottom: 1px solid $ligthGreen;
-                color: $darkGreen;
+                border-bottom: 1px solid $ligthColor;
+                color: $darkColor;
                 &::placeholder {
                     color: #2456396b;
                 }
 
                 &:focus {
                     outline: none;
-                    border-bottom: 1px solid $darkGreen;
+                    border-bottom: 1px solid $darkColor;
                 }
             }
 
@@ -52,7 +52,7 @@
                 width: max-content;
                 cursor: pointer;
                 font-size: 12px;
-                color: $darkGreen;
+                color: $darkColor;
                 display: flex;
                 gap: 5px;
                 align-items: center;
@@ -60,25 +60,25 @@
                 .avatar {
                     font-size: 24px;
                     border-radius: 5px;
-                    color: $ligthGreen;
+                    color: $ligthColor;
                 }
 
             }
 
             button {
-                background-color: $ligthGreen;
+                background-color: $ligthColor;
                 border: none;
                 padding: 10px;
                 border-radius: 5px;
                 cursor: pointer;
-                color: $darkGreen;
+                color: $darkColor;
                 font-weight: bold;
             }
         }
 
         p {
             font-size: 12px;
-            color: $darkGreen;
+            color: $darkColor;
         }
     }
 }
