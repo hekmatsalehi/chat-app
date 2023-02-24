@@ -1,3 +1,27 @@
+@import '../../variables.scss';
+
 .chat {
     flex: 2;
+
+    .chatInfo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #4f7760;
+        height: 50px;
+        padding: 10px;
+        color: #e9eeeb;
+        
+        .chatIcons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            gap: 10px;
+
+            .icon {
+                cursor: pointer;
+            }
+        }
+    }
 }
