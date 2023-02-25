@@ -1,7 +1,7 @@
 @import '../../variables.scss';
 
 .formContainer {
-    background-color: $ligthColor;
+    background-color: $lightColor;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -36,7 +36,7 @@
             input {
                 padding: 10px 0px;
                 border: none;
-                border-bottom: 1px solid $ligthColor;
+                border-bottom: 1px solid $lightColor;
                 color: $darkColor;
                 &::placeholder {
                     color: #2456396b;
@@ -60,13 +60,13 @@
                 .avatar {
                     font-size: 24px;
                     border-radius: 5px;
-                    color: $ligthColor;
+                    color: $lightColor;
                 }
 
             }
 
             button {
-                background-color: $ligthColor;
+                background-color: $lightColor;
                 border: none;
                 padding: 10px;
                 border-radius: 5px;

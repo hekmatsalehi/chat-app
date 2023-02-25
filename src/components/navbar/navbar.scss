@@ -7,7 +7,7 @@
     height: 50px;
     padding: 10px;
     justify-content: space-between;
-    color: $ligthColor;
+    color: $lightColor;
 
     .logo {
         font-weight: bold;
@@ -18,7 +18,7 @@
         gap: 10px;
 
         img {
-            background-color: $ligthColor;
+            background-color: $lightColor;
             width: 24px;
             height: 24px;
             border-radius: 50px;
@@ -27,7 +27,7 @@
 
         button {
             border: none;
-            background-color: $ligthColor;
+            background-color: $lightColor;
             cursor: pointer;
             border-radius: 3px;
             color: $veryDarkColor;
