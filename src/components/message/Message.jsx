@@ -1,3 +1,4 @@
+import './message.scss'
 
 function Message() {
   return (

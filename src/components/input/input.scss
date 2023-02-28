@@ -1,0 +1,48 @@
+@import '../../variables.scss';
+
+.input {
+    height: 50px;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    input {
+        width: 100%;
+        margin-right: 10px;
+        border: none;
+        outline: none;
+        color: $darkColor;
+        font-size: 16px;
+
+        &::placeholder {
+            color: #2456396b;
+        }
+
+    }
+
+    .send {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: $darkColor;
+        height: 100%;
+        
+        & * {
+            cursor: pointer;
+        }
+
+        button {
+            border: none;
+            background-color: inherit;
+            padding: 3px;
+            display: flex;
+            border-radius: 3px;
+            &:hover {
+                background-color: $lightColor;
+            }
+           
+        }
+    }
+}
