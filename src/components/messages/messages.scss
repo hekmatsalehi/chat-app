@@ -2,4 +2,11 @@
     background-color: #e9eeeb;
     padding: 10px;
     height: calc(100% - 160px);
+    overflow: auto;
+    scrollbar-width: none; /* hide scrollbar on Firefox */
+    -ms-overflow-style: none; /* hide scrollbar on IE and Edge */
+
+    &::-webkit-scrollbar {
+        display: none; /* hide scrollbar on Chrome, Safari, and Opera */
+    }
 }
