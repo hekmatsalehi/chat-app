@@ -2,7 +2,7 @@ import './message.scss'
 
 function Message() {
   return (
-    <div className='message'>
+    <div className='message owner'>
       <div className="messageInfo">
         <img src='https://images.unsplash.com/photo-1661261656149-879b82aaad59?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDI5fEZ6bzN6dU9ITjZ3fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60' alt=''/>
         <span>just now</span>

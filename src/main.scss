@@ -1,0 +1,22 @@
+$lightColor: #bcdcc5;
+$darkColor: #245639;
+$veryDarkColor: #1c442d;
+
+
+@mixin mobile {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}

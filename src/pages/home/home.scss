@@ -1,4 +1,4 @@
-@import '../../variables.scss';
+@import '../../main.scss';
 
 .home {
     background-color: $lightColor;
@@ -14,5 +14,11 @@
         height: 80%;
         display: flex;
         overflow: hidden;
+        position: relative;
+
+        @include tablet {
+            width: 90%;
+            height: 90%;
+        }
     }
 }
