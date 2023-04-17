@@ -65,6 +65,12 @@
 
             }
 
+            .errorMsg {
+                font-size: 12px;
+                color: red;
+                text-align: center;
+            }
+
             button {
                 background-color: $lightColor;
                 border: none;
