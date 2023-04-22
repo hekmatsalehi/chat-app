@@ -4,11 +4,13 @@ import { auth, db, storage } from "../../firebase";
 import { useState } from "react";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 import "./register.scss";
 
 function Register() {
     const [error, setError] = useState("");
+    const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -69,7 +71,8 @@ function Register() {
                             });
 
                             await setDoc(doc(db, "userChats", response.user.uid), {}) // Create user chats, at the begining it would be empty
-                        }
+                            navigate("/")
+                          }
                     );
                 }
             );
