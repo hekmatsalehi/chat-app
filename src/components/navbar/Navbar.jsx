@@ -1,3 +1,5 @@
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebase";
 import "./navbar.scss";
 
 function Navbar() {
@@ -10,7 +12,7 @@ function Navbar() {
           alt=""
         />
         <span>Tom</span>
-        <button>Logout</button>
+        <button onClick={() => signOut(auth)}>Logout</button>
       </div>
     </div>
   );
