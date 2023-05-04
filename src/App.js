@@ -2,14 +2,14 @@ import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import Home from "./pages/home/Home";
 import NotFound from "./pages/notFound/NotFound";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import { AuthContext } from "./context/AuthContext";
 import { useContext } from "react";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Home />,
+        element: <ProtectedRoute><Home /></ProtectedRoute>,
         errorElement: <NotFound />,
     },
     {
@@ -23,9 +23,15 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-    const { currentUser } = useContext(AuthContext);
-    console.log(currentUser);
     return <RouterProvider router={router} />;
 }
 
+function ProtectedRoute ({children}) {
+    const { currentUser } = useContext(AuthContext);
+    if(!currentUser) {
+        return <Navigate to="/login" />
+    }
+
+    return children;
+}
 export default App;
