@@ -4,7 +4,7 @@ import { auth, db, storage } from "../../firebase";
 import { useState } from "react";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./register.scss";
 
@@ -98,7 +98,7 @@ function Register() {
                     {error && <span className="errorMsg">{error}</span>}
                     <button>Sign up</button>
                 </form>
-                <p>Do you have an account? Login</p>
+                <p>Do you have an account? <Link to="/login">Login</Link></p>
             </div>
         </div>
     );
