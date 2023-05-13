@@ -29,6 +29,10 @@
             object-fit: cover;
         }
 
+        span {
+            text-transform: capitalize;
+        }
+
         button {
             border: none;
             background-color: $lightColor;
