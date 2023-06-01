@@ -25,7 +25,7 @@ function Register() {
                 email,
                 password
             );
-            console.log(response.user);
+            
             const storageRef = ref(storage, displayName); // displayName is as a fileName
 
             const uploadTask = uploadBytesResumable(storageRef, file);
