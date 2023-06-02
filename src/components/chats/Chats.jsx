@@ -45,7 +45,7 @@ function Chats() {
                     <img src={chat[1].userInfo.photoURL} alt="" />
                     <div className="userChatInfo">
                         <span>{chat[1].userInfo.displayName}</span>
-                        <p>{chat[1].lastMessage?.text}</p>
+                        <p>{truncateMessage(chat[1].lastMessage?.text)}</p>
                     </div>
                 </div>
             ))}
@@ -53,5 +53,14 @@ function Chats() {
     );
 }
 
+function truncateMessage(message) {
+    if(!message) {
+        return "";
+    }
+    const words = message.split(" ");
+    const truncatedWords = words.slice(0, 5);
+
+    return truncatedWords.join(" ") + (words.length > 5 ? "..." : "");
+}
 
 export default Chats;
