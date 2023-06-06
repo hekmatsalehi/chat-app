@@ -19,18 +19,26 @@
         }
     }
 
-    .messageContent {
+    .messageContainer {
         max-width: 80%;
         display: flex;
         flex-direction: column;
         gap: 10px;
 
-        p {
+        .messageContent {
             background-color: white;
-            padding: 10px 20px;
+            padding: 10px 15px 5px 15px;
             border-radius: 0px 5px 5px 5px;
             max-width: max-content;
             color: $darkColor;
+
+            .dateTime {
+                font-size: 8px;
+                color: #6a8e7a;
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+            }
         }
         img {
             width: 50%;
@@ -40,9 +48,9 @@
     &.owner {
         flex-direction: row-reverse;
         
-        .messageContent {
+        .messageContainer {
             align-items: flex-end;
-            p {
+            .messageContent {
                 border-radius: 5px 0px 5px 5px;
                 background-color: #bcdcc5cd;
                 color: $veryDarkColor;

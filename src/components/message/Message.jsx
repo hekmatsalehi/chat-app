@@ -1,6 +1,8 @@
 import { useContext, useEffect, useRef } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { ChatContext } from "../../context/ChatContext";
+import { convertEpochToTime } from "../../utils/convertEpochToTime";
+import { convertEpochToDate } from "../../utils/convertEpochToDate";
 import "./message.scss";
 
 function Message({ message }) {
@@ -8,8 +10,6 @@ function Message({ message }) {
     const { data } = useContext(ChatContext);
 
     const chatRef = useRef(null);
-
-    console.log("--- message", message)
 
     useEffect(() => {
         if (chatRef.current) {
@@ -33,10 +33,15 @@ function Message({ message }) {
                     }
                     alt=""
                 />
-                <span>just now</span>
             </div>
-            <div className="messageContent">
-                <p>{message.text}</p>
+            <div className="messageContainer">
+                <div className="messageContent">
+                    <p>{message.text}</p>
+                    <div className="dateTime">
+                        <span>{convertEpochToTime (message.date.seconds)}</span>
+                        <span>{convertEpochToDate (message.date.seconds)}</span>
+                    </div>
+                </div>
                 {message.img && <img src={message.img} alt="" />}
             </div>
         </div>
